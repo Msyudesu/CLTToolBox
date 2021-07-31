@@ -1,0 +1,32 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto" style="justify-content: center; text-align: center;">
+            <h1>CLT Toolbox Home</h1>
+            <p>Construction in Progress. Everything you see is still a work in progress and may change entirely in the future.</p>
+        </div>
+        {% for app in apps%}
+        <div class="col-sm-6 mb-4">
+            {% if app.url %}
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ app.title }}</h5>
+                    <p class="card-text">{{ app.description }}</p>
+                    <a href="{% url app.url %}" class="btn btn-outline-primary">Open</a>
+                </div>
+            </div>
+            {% else %} <!-- URL is missing, automatically disable the card. -->
+            <div class="card h-100">
+                <div class="card-body" style="background-color: lightslategrey;">
+                    <h5 class="card-title">{{ app.title }}</h5>
+                    <p class="card-text">{{ app.description }}</p>
+                    <a href="#" class="btn btn-primary disabled">Unavailable</a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

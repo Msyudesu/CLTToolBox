@@ -1,0 +1,12 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'cltlog/log.css' %}">
+{% endblock styles %}
+{% block content %}
+{% for entry in entries %}
+<div class="card log-entry">
+    <p>{{ entry.count }} {{ entry.prefix}} loaded on {{ entry.record_date }} by {{ entry.operator }} in {{ entry.hood }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

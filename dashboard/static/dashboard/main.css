@@ -1,0 +1,30 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color:aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 75px;
+    background-color: #1e2225;
+}
+
+a.disabled {
+    cursor: default;
+}
+
+.card-body {
+    background-color: rgb(63, 73, 100);
+}
+
+.card-title {
+    font-size: 26px;
+    justify-content: center;
+    text-align: left;
+}
+
+.card-text {
+    font-size: 20px;
+    justify-content: center; 
+    text-align: left;
+}

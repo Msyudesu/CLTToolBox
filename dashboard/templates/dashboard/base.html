@@ -53,12 +53,17 @@
                     <!-- Right Sight -->
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" href="#"><i class="fa fa-sign-in"></i> Sign In</a>
-                        <a class="nav-item nav-link" href="#"><i class="fa fa-user-plus"></i> Register</a>
+                        <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a>
                     </div>
                 </div>
             </div>
         </nav>
         <main role="main" class="container">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
             {% block content %}{% endblock content %}
         </main>
         <!-- Optional JavaScript -->

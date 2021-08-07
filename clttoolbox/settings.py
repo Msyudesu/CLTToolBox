@@ -128,3 +128,6 @@ STATIC_URL = '/static/'
 
 # Crispy Forms Settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Redirects
+LOGIN_REDIRECT_URL = 'dashboard-home'

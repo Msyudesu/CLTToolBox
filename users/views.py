@@ -9,7 +9,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f"Account created for {username}")            
+            messages.success(request, f"Account created successfully. You may now log in.")            
             return redirect('dashboard-home')
 
     else:
@@ -18,3 +18,6 @@ def register(request):
         'form' : form,
     }
     return render(request, "users/register.html", context )
+
+def profile(request):
+    return render(request, 'users/profile.html')

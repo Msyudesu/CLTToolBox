@@ -52,8 +52,13 @@
                     </div>
                     <!-- Right Sight -->
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#"><i class="fa fa-sign-in"></i> Sign In</a>
-                        <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a>
+                        {% if user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{% url 'profile' %}"><i></i> {{ user.username }}</a>
+                            <a class="nav-item nav-link" href="{% url 'logout' %}"> Sign Out <i class="fa fa-sign-in"></i> </a>
+                        {% else %}
+                            <a class="nav-item nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Sign In</a>
+                            <a class="nav-item nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

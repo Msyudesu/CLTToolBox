@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+from django.contrib.auth import SESSION_KEY
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -76,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'clttoolbox.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -131,3 +132,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Redirects
 LOGIN_REDIRECT_URL = 'dashboard-home'
+LOGIN_URL = 'login'

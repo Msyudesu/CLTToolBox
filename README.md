@@ -1,5 +1,5 @@
 # CLT Tool Box
-### Executive Statement
+
 *A demo website (WIP) to offer management as a replacement/improvement to existing paper processes and/or the combination of many separated utilities used by Manufacturing. The intent is to simplify and create of sort of one-stop-shop for all of our Manufacturing Operators' needs.*
 
 #### The current plan is to include at least the following:
